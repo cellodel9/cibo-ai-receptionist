@@ -1,0 +1,26 @@
+# Copy this file to ".env" and fill in your real values. Never commit ".env".
+
+# From platform.openai.com -> API keys
+OPENAI_API_KEY=sk-proj-...
+
+# From platform.openai.com -> Settings -> Webhooks (created when you set up the webhook)
+OPENAI_WEBHOOK_SECRET=whsec_...
+
+# Port the server listens on (leave as-is unless your host requires a specific port)
+PORT=8000
+
+# Gmail address the AI will send caller messages FROM
+EMAIL_USER=youraddress@gmail.com
+
+# A Gmail "App Password" (NOT your normal Gmail password) - see README for how to create one
+EMAIL_APP_PASSWORD=
+
+# Where caller messages get emailed TO (defaults to EMAIL_USER if left blank)
+MESSAGE_RECIPIENT_EMAIL=marcellodelpietro5@gmail.com
+
+# Optional: timezone used when timestamping messages
+TIMEZONE=America/Chicago
+
+# Optional overrides
+REALTIME_MODEL=gpt-realtime
+REALTIME_VOICE=alloy

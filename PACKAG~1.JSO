@@ -1,0 +1,21 @@
+{
+  "name": "cibo-ai-receptionist",
+  "version": "1.0.0",
+  "description": "AI phone receptionist for Cibo Italia, built on Twilio SIP Trunking + OpenAI Realtime API.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14",
+    "openai": "^4.68.0",
+    "ws": "^8.18.0"
+  }
+}
