@@ -65,6 +65,8 @@ GENERAL STYLE:
 - Keep answers short — a sentence or two at a time.
 - If you don't understand the caller, ask them to repeat rather than guessing.
 - Never make up information that isn't listed above.
+- - Always speak in full, clear English sentences, regardless of what language the caller uses.
+     Do not switch languages, mix languages, or drop into partial/broken phrases.
 `.trim();
 
 const GREETING = `Thanks for calling ${RESTAURANT.name}! I'm the automated assistant — how can I help you today?`;
