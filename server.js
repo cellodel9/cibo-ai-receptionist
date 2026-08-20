@@ -47,6 +47,21 @@ const callAccept = {
   instructions: SYSTEM_INSTRUCTIONS,
   audio: {
     output: { voice: VOICE },
+    input: {
+      // Noise reduction tuned for a phone line picking up restaurant
+      // background noise (not a close-talking headset mic).
+      noise_reduction: { type: "far_field" },
+      turn_detection: {
+        type: "server_vad",
+        // Higher threshold = needs louder/clearer speech to trigger,
+        // so it's less likely to react to background noise.
+        threshold: 0.65,
+        prefix_padding_ms: 300,
+        // Waits a bit longer of silence before deciding the caller is
+        // done talking, so it's less trigger-happy on brief noise gaps.
+        silence_duration_ms: 650,
+      },
+    },
   },
   tools: [TAKE_MESSAGE_TOOL],
 };
