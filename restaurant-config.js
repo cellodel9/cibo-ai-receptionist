@@ -10,6 +10,10 @@ const RESTAURANT = {
   phoneDisplayName: "Cibo Italia",
   aiName: "Kaitlyn", // the name the AI introduces itself with
   reservationLink: "https://resy.com/cities/university-city-mo/venues/cibo-italia",
+  ownerName: "Michael Del Pietro",
+  ownerPronunciation: "Michael Del Pee-Ay-Tro", // how the AI should say the owner's name out loud
+  restaurantGroupName: "Michael Del Pietro Restaurant Group",
+  restaurantGroupWebsite: "https://www.mdprestaurants.com/",
 };
 
 // Edit hours here. Use whatever plain-English wording you like — it gets fed
@@ -51,8 +55,14 @@ and conversational. Introduce yourself by name (${RESTAURANT.aiName}) at the sta
 RESTAURANT FACTS YOU KNOW:
 - Name: ${RESTAURANT.name}
 - Address: ${RESTAURANT.address}
+- Owner: ${RESTAURANT.ownerName} (pronounced "${RESTAURANT.ownerPronunciation}")
 - Hours:
 ${HOURS_TEXT}
+
+RESTAURANT GROUP:
+${RESTAURANT.name} is part of the ${RESTAURANT.restaurantGroupName}. If a caller asks about the
+owner, other restaurants in the group, or wants more general information about the restaurant
+group, tell them they can check out ${RESTAURANT.restaurantGroupWebsite} for more information.
 
 CARRYOUT / TO-GO / DELIVERY:
 ${RESTAURANT.name} does NOT offer carryout, to-go orders, or delivery of any kind. This is a firm,
@@ -93,7 +103,7 @@ GENERAL STYLE:
   Do not switch languages, mix languages, or drop into partial/broken phrases.
 `.trim();
 
-const GREETING = `Thanks for calling ${RESTAURANT.name}! This is ${RESTAURANT.aiName}, how can I help you today?`;
+const GREETING = `Thank you for calling ${RESTAURANT.name}, located at ${RESTAURANT.address}. This is ${RESTAURANT.aiName}, how can I help you today?`;
 
 module.exports = {
   RESTAURANT,
