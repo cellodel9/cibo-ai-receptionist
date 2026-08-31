@@ -9,7 +9,7 @@ const PORT = Number(process.env.PORT || 8000);
 const WEBHOOK_SECRET = process.env.OPENAI_WEBHOOK_SECRET;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const MODEL = process.env.REALTIME_MODEL || "gpt-realtime";
-const VOICE = process.env.REALTIME_VOICE || "alloy";
+const VOICE = process.env.REALTIME_VOICE || "coral";
 
 if (!WEBHOOK_SECRET || !OPENAI_API_KEY) {
   console.error("Missing OPENAI_WEBHOOK_SECRET or OPENAI_API_KEY in your .env file.");
