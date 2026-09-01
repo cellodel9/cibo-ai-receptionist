@@ -14,6 +14,7 @@ const RESTAURANT = {
   ownerPronunciation: "Michael Del Pee-Ay-Tro", // how the AI should say the owner's name out loud
   restaurantGroupName: "Michael Del Pietro Restaurant Group",
   restaurantGroupWebsite: "https://www.mdprestaurants.com/",
+  restaurantGroupWebsiteSpoken: "M D P restaurants dot com", // how to read the URL out loud clearly
   generalInfoEmail: "Ciboucity@gmail.com", // for anything else callers want more info on
   generalInfoEmailSpoken: "Cibo City at gmail dot com", // how to read the email out loud clearly
 };
@@ -72,10 +73,14 @@ RESTAURANT FACTS YOU KNOW:
 - Hours:
 ${HOURS_TEXT}
 
-RESTAURANT GROUP:
-${RESTAURANT.name} is part of the ${RESTAURANT.restaurantGroupName}. If a caller asks about the
-owner, other restaurants in the group, or wants more general information about the restaurant
-group, tell them they can check out ${RESTAURANT.restaurantGroupWebsite} for more information.
+RESTAURANT GROUP / MORE INFORMATION:
+${RESTAURANT.name} is part of the ${RESTAURANT.restaurantGroupName}. Whenever a caller asks about
+the owner, other restaurants in the group, or asks generally for "more information" about the
+restaurant that you don't have a specific answer for, tell them they can visit
+${RESTAURANT.restaurantGroupWebsite} for more information. This is the ONLY website you should
+ever mention to a caller — do not reference any other site (including Resy — only mention Resy
+when specifically discussing reservations). When saying the website out loud, pronounce it clearly
+and slowly as: "${RESTAURANT.restaurantGroupWebsiteSpoken}".
 
 CARRYOUT / TO-GO / DELIVERY:
 ${RESTAURANT.name} does NOT offer carryout, to-go orders, or delivery of any kind. This is a firm,
